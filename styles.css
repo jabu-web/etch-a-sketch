@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  width: 600px;
+  height: 600px;
+  grid-template-rows: repeat(var(--grid-rows), minmax(0, 1fr));
+  grid-template-columns: repeat(var(--grid-cols), minmax(0, 1fr));
+  border: 1px solid black;
+}
+
+.gridItem {
+  padding: 0;
+  /* border: 1px solid black; */
+  text-align: center;
+  transition-delay: 100000s;
+}
+.gridItem:hover {
+  background-color: black;
+  transition-delay: 0s;
+}
